@@ -8,7 +8,7 @@
 
 ## 데모 사이트
 
-프로젝트의 데모 사이트는 [여기](https://ogh010.github.io/watch-clone/)에서 확인할 수 있습니다.
+프로젝트의 데모 사이트는 [여기](https://ogh010.github.io/citizen-clone/)에서 확인할 수 있습니다.
 
 ## 스크린샷
 
