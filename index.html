@@ -1,482 +1,591 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, 
-  maximum-scale=1.0, minimum-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, 
+  maximum-scale=1.0, minimum-scale=1.0"
+    />
     <title>gahee's citizen</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    
-    
+
     <!--폰트어썸-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
     <!--구글폰트1,2-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="shortcut icon" href="./img/mind.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/index.js"></script>
-</head>
+  </head>
 
-<body>
-  <script> AOS.init(); </script>
-<!--   <img src="./img/start_bg1.png" class="bgimg">-->
+  <body>
+    <script>
+      AOS.init();
+    </script>
+    <!--   <img src="./img/start_bg1.png" class="bgimg">-->
     <div id="wrapper">
-        <header id="header">
+      <header id="header">
+        <div>
+          <!--<div class="hamburger" ><i class="fas fa-bars"></i></div>-->
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="logo">
+            <a href="today.html"
+              ><img src="./img/logo-header.svg" alt="시티즌로고" />citizen</a
+            >
+          </div>
+          <div class="sns">
             <div>
-                <!--<div class="hamburger" ><i class="fas fa-bars"></i></div>-->
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="logo"><a href="today.html"><img src="./img/logo-header.svg" alt="시티즌로고">citizen</a></div>
-                <div class="sns">
-                    <div>
-                        <div><a href="https://www.instagram.com/citizen_korea/?hl=ko"><img src="./img/instagram.svg" alt="로고"></a></div>
-                        <div><img src="./img/icon-global.svg" alt="지구아이콘"></div>
-                        <div><a href="http://www.galleryoclock.co.kr/galleryoclock_m/main/main.asp"><img src="./img/logo_citizen.svg" alt="아이콘"></a></div>
-                    </div>
-                </div>
+              <div>
+                <a href="https://www.instagram.com/citizen_korea/?hl=ko"
+                  ><img src="./img/instagram.svg" alt="로고"
+                /></a>
+              </div>
+              <div><img src="./img/icon-global.svg" alt="지구아이콘" /></div>
+              <div>
+                <a
+                  href="http://www.galleryoclock.co.kr/galleryoclock_m/main/main.asp"
+                  ><img src="./img/logo_citizen.svg" alt="아이콘"
+                /></a>
+              </div>
             </div>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="#COLLECTIONS">COLLECTIONS</a></li>
-                <li><a href="#CONCEPT">CONCEPT</a></li>
-                <li><a href="#NEWS">NEWS</a></li>
-                <li><a href="#SUPPORT">SUPPORT</a></li>
-                <li><a href="#SHOPLSIT">SHOP LSIT</a></li>
-                <div class="hover-element"></div>
-            </ul>
-            <div class="link-img">
-               <!-- <img id="COLLECTIONS" src="./img/add96277-a50f-4098-86ff-f905e85bd600.jpg" alt="">-->
-                <video id="COLLECTIONS" src="./img/BRANDSTORY_PC.mp4" autoplay loop muted></video>
-                <img id="CONCEPT" src="./img/loivie_pick_bg_03.jpg" alt="네브이미지1">
-                <img id="NEWS" src="./img/loivie_pick_bg_02.jpg" alt="네브이미지2">
-                <img id="SUPPORT" src="./img/loivie_is-daily_img_pc_01.jpg" alt="네브이미지3">
-                <img id="SHOPLSIT" src="./img/loivie_pick_bg_05.jpg" alt="네브이미지4">
-            </div>
-        </nav>
-        <!--header-->
-        <section id="banner">
-           <div class="banimg">
-               <img src="./img/bg_maintop_ring.png" alt="메인페이지 시계이미지">
-           </div>
-            <div>
-                <div class="bannerImg">
-                    <div class="bannerslide1">
-                        <div class="slideView1">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bannerTxt">
-                    <div class="bannerslide2">
-                        <div class="slideView2">
-                            <div>
-                                <h6 class="element">2021.06  COLLECTIONS</h6>
-                                <h1 class="element">AMBILUNA</h1>
-                                <p class="element">소중한 사람을 위한 가치있는 선물 </p>
-                                <a class="element" href="#">Read More</a>
-                            </div>
-                            <div>
-                                <h6 class="element">2021.06  COLLECTIONS</h6>
-                                <h1 class="element">ARCLY</h1>
-                                <p class="element">레이어드하기 좋은 데일리 썸머 BEST</p>
-                                <a class="element" href="#">Read More</a>
-                            </div>
-                            <div>
-                                <h6 class="element">2021.06  COLLECTIONS</h6>
-                                <h1 class="element">SQUARE</h1>
-                                <p class="element">계속 놀라운 사랑을 받고있는 '스퀘어'</p>
-                                <a class="element" href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="bannerViewMore">
-                <span class="ViewMoreTxt">ViewMore</span>
-                <div class="viewmoreIcon"></div>
-            </div>
-            <div class="bannerIndicator">
-                <div class="indicatorPrev"></div>
-                <div class="timer">
-                    <div class="line"></div>
-                </div>
-                <div class="indicatorNext"></div>
-            </div>
-            <div class="indicator">
-                <div class="current">1</div>
-                <div class="allNum"></div><br>
-            </div>
-        </section>
-        <!--banner-->
-            <section id="new">
-                <div class="inner">
-                    <h2 class="newTitle">NEWS</h2>
-                    <div>
-                        <div class="item item1">
-                            <div class="itemImgOuter">
-                                <div class="itemImg">
-                                    <div class="imgLayer"></div>
-                                </div>
-                                
-                            </div>
-                            <div class="itemTxt">
-                                <span>2021-05-17</span>
-                                <p>CHAN LUU  모델 7 월 1 일부터 예약</p>
-                            </div>
-                        </div>
-                        <div class="item item2">
-                            <div class="itemImgOuter">
-                                <div class="itemImg">
-                                    <div class="imgLayer"></div>
-                                </div>
-                            </div>
-                            <div class="itemTxt">
-                                <span>2021-05-17</span>
-                                <p>시티즌 New Ambiluna 컬렉션 </p>
-                            </div>
-                        </div>
-                        <div class="item item3">
-                            <div class="itemImgOuter">
-                                <div class="itemImg">
-                                    <div class="imgLayer"></div>
-                                </div>
-                            </div>
-                            <div class="itemTxt">
-                                <span>2021-05-17</span>
-                                <p>디즈니 스페셜 시계 6 월 28 일 출시</p>
-                            </div>
-                        </div>
-                        <div class="item item4">
-                            <div class="itemImgOuter">
-                                <div class="itemImg">
-                                    <div class="imgLayer"></div>
-                                </div>
-                            </div>
-                            <div class="itemTxt">
-                                <span>2021-05-17</span>
-                                <p>2021 신모델 출시</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="social">
-              <div class="animcontainer">
-                <div class="bouncybox">
-                  <div class="bouncy"></div>
-                </div>
-               </div>
-               <div class="socialC">
-                   <img src="./img/pc_gl_title.png"  data-aos="fade-left" alt="타이틀이미지">
-               </div>
-                <div class="inner">
-                    <video muted loop autoplay src="./img/citizenV.mp4">
-                    </video>
-                    <i class="far fa-play-circle"></i>
-                </div>
-                
-            </section>
-            
-            <section id="bgchane">
-                <div class="scroll" id="scroll-one">
-                   <img src="./img/concept_next.png" class="concept" alt="컨셉이미지">
-                    <div class="bgCinner">
-                        <div class="item01">
-                            <div class="page-img">
-                                <div >
-                                    <div class="imgLayer" ></div>
-                                </div>
-                                <video autoplay loop muted src="./img/ambiluna_earth.mp4" data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom" >
-                                </video>
-                                
-                            </div>
-                            <div class="page-txt">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <div class="content">
-                                    <h1 class="element">Inspired by EARTH</h1>
-                                    <p class="element">지구의 끝없는 확장 그리 비가 내린 후 땅의 신선함</p>
-                                    <a class="element" href="#">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="scroll" id="scroll-two">
-                    <div class="bgCinner">
-                        <div class="item02">
-                            <div class="page-img">
-                                <div>
-                                    <div class="imgLayer"></div>
-                                </div>
-                                <video autoplay loop muted src="./img/ambiluna_fire.mp4" data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom" ></video>
-                            </div>
-                            <div class="page-txt">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <div class="content">
-                                    <h1 class="element">Inspired by FIRE</h1>
-                                    <p class="element">부드러운 아침 햇살처럼 자연스러운 아름다움 </p>
-                                    <a class="element" href="#">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="scroll" id="scrol-three">
-                    <div class="bgCinner">
-                        <div class="item03">
-                            <div class="page-img">
-                                <div>
-                                    <div class="imgLayer"></div>
-                                </div>
-                                <video autoplay loop muted src="./img/ambiluna_air.mp4"  data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom"></video>
-                            </div>
-                            <div class="page-txt">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <div class="content">
-                                    <h1 class="element">Inspired by AIR</h1>
-                                    <p class="element">시원한 바람과 맑은 공기처럼 가볍고 투명함 </p>
-                                    <a class="element" href="#">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-           <section id="watchColor"> 
-           <h3 class="watchTxt"><span>W</span>atch <br><span>Y</span>our<br> <span>C</span>olor</h3>
-            <div class="black">
-                <div class="lightBox1" data-aos="zoom-in-up" data-aos="fade-up">
-                   <div class="LBimg LB1img"></div>
-                    <h1 class="element">화이트 초콜릿 커넥터 가죽스트랩</h1>
-                    <p class="element">크림 베이지의 부드러운 색감을 담은 스트랩</p>
-                    <span class="price"><s>69,900원</s></span>
-                    <span class="sale">59,900원</span>
-                </div>
-                <div class="lightBox2" data-aos="zoom-in-up" data-aos="fade-up">
-                   <div class="LBimg LB2img"></div>
-                    <h1 class="element">웜 그레이 커넥터 가죽스트랩</h1>
-                    <p class="element">드레스업부터 캐주얼룩까지 모두 어울리는 베이지 그레이</p>
-                    <span class="price"><s>69,900원</s></span>
-                    <span class="sale">59,900원</span>
-                </div>
-                <div class="lightBox3" data-aos="zoom-in-up" data-aos="fade-up"> 
-                   <div class="LBimg LB3img"></div>
-                    <h1 class="element">진저 브라운 커넥터 가죽스트랩</h1>
-                    <p class="element">진저 쿠키에서 영감을 받은 카멜 컬러 스트랩</p>
-                    <span class="price"><s>69,900원</s></span>
-                    <span class="sale">59,900원</span>
-                </div>
-            </div>
-            <div class="two"></div>
-        </section>
-
-           
-            <section id="lovi">
-<!--                <div class="loviBg"></div>-->
-                <div class="inner">
-                   <h2 class="loviTitle">citizen's</h2>
-                    <ul>
-                       <li class="loviEn">What is your color?</li>
-                        <li class="loviKo">당신의 색은 무엇인가요?</li>
-                        
-                        <li class="loviEn">About Your Color</li>
-                        <li class="loviKo">좋아하는 것들, 기억하고 싶은 순간을 담은 컬러로 당신을 표현해 보세요.</li>
-                        
-                        <li class="loviEn">Birth Stone</li>
-                        <li class="loviKo">나를 상징하는 시티즌의 탄생석 컬렉션으로 당신의 다채로운 이야기를 전해주세요.</li>
-                        
-    
-                        
-                    </ul>
-                    <div class="loviImg">
-                        <img src="./img/mind.png" alt="수채화이미지">
-                        <img src="./img/essence.png" alt="수채화이미지">
-                        <img src="./img/roots.png" alt="수채화이미지">
-                        
-                        
-                        <img src="./img/loivie_pick_bg_03.jpg" alt="배경이미지">
-                        <img src="./img/loivie_is-clean_img_pc_01.jpg" alt="배경이미지">
-                        <img src="./img/loivie_is-awakening_img_pc_01.jpg" alt="배경이미지">
-                        
-                        <img src="./img/st1.png" alt="탄생석이미지">
-                        <img src="./img/st2.png" alt="탄생석이미지">
-                        <img src="./img/st4.png" alt="탄생석이미지">
-                        <img src="./img/st5.png" alt="탄생석이미지">
-                    </div>
-                </div>
-                
-             </section>
-             <section id="nextChallnge">
-                <div class="connectImg"></div>
-                <div class="centerImg"></div>
-                <div class="leftImg"></div>
-                <div class="rightImg"></div>
-                <div class="half">
-                    <div class="left" data-aos="flip-left">
-                        <div class="nextText">
-                            <h3>OUR NEXT CHALLENGE</h3>
-                            <h2>CITIZEN Eco-Drive Riiiver <br> APP</h2>
-                            <h2>시티즌 에코 드라이브 앱으로 만나보세요!</h2>
-                            <div class="nextLeftIcon">
-                                <img src="./img/icn_riiiver01.png" alt="app">
-                                <img src="./img/btn_appstore.png" alt="app">
-                                <img src="./img/btn_googleplay.png" alt="app">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="right" data-aos="flip-right">
-                        <div class="nextText">
-                            <h2>COMMING SOON</h2>
-                            <p>With watch and Riiver,</p>
-                            <p>A new everyday is born.</p>
-                            <p>시티즌 에코 드라이브와 함께, <br>새로운 일상을 시작해보세요!</p>
-                            <div data-brackets-id='129' class="container">
-                                  <p class="containerTitle"><span>2021년 <span>8월 1일</span> </span></p>
-                                  <div data-brackets-id='131' id="countdown">
-                                    <ul data-brackets-id='132'>
-                                      <li data-brackets-id='133'><span data-brackets-id='134' id="days"></span>days</li>
-                                      <li class="col"><span>-</span></li>
-                                      
-                                      <li data-brackets-id='135'><span data-brackets-id='136' id="hours"></span>hours</li>
-                                      <li class="col"><span>:</span></li>
-                                      
-                                      <li data-brackets-id='137'><span data-brackets-id='138' id="minutes"></span>minutes</li>
-                                      <li class="col"><span>:</span></li>
-                                      
-                                      <li data-brackets-id='139'><span data-brackets-id='140' id="seconds"></span>seconds</li>
-                                    </ul>
-                                  </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-             </section>
-
-        <footer id="footer">
-                <div class="foot1">
-                       <img src="./img/design_pict_01.png" class="fring" alt="푸터이미지">
-                        <div class="foot1Text">
-                            <span data-aos="fade-up"><a href="https://www.instagram.com/citizen_korea/?hl=ko"><img src="./img/instagram_pk.svg" alt="인스타"></a></span>
-                            
-                            <h3 data-aos="fade-up"  data-aos-delay="300">Follw us on Instagram</h3>
-                            <p data-aos="fade-up"  data-aos-delay="600"><a href="https://www.instagram.com/citizen_korea/?hl=ko">@citizen_korea</a></p>
-                        </div>
-                        <div class="instagramImg">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                </div>
-                <div class="foot2">
-                    <div class="inner">
-                        <div class="foot2left">
-                            <ul>
-                                <li class="top"><a href="#">TOP</a></li>
-                                <li class="newTop"><a href="#">NEW</a></li>
-                                <li class="timeTop"><a href="#">TIME</a></li>
-                                <li class="conceptTop"><a href="#">CONCEPT</a></li>
-                            </ul>
-                            <ul>
-                                <li class="watchTop"><a href="#">WATCH YOUR COLOR</a></li>
-                                <li class="otherTop"><a href="#">OTHER COLLECTION</a></li>
-                                <li class="aboutTop"><a href="#">ABOUT YOUR COLOR</a></li>
-                                <li class="nextTop"><a href="#">OUR NEXT CHALLENGE</a></li>
-                            </ul>
-                        </div>
-                        <div class="foo2right">
-                            <div></div>
-                            <div>
-                                <span>KO</span>
-                                <span>EN</span>
-                                <button>LOCAL SITE
-                                <span class="footBtn">LOCAL SITE</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="foot3">
-                    <div class="inner">
-                        <p>2021 CITIZEN WATCH CO. LTD.</p>
-                        <p>&copy; 2021 OH, GAHEE Copyright All rights reserved</p>
-                    </div>
-                </div>
-            
-
-        </footer>
-        <div class="circle">
-            <span></span>
-            <span></span>
-            <span></span>
+          </div>
         </div>
-        
-        
+      </header>
+      <nav>
+        <ul>
+          <li><a href="#COLLECTIONS">COLLECTIONS</a></li>
+          <li><a href="#CONCEPT">CONCEPT</a></li>
+          <li><a href="#NEWS">NEWS</a></li>
+          <li><a href="#SUPPORT">SUPPORT</a></li>
+          <li><a href="#SHOPLSIT">SHOP LSIT</a></li>
+          <div class="hover-element"></div>
+        </ul>
+        <div class="link-img">
+          <!-- <img id="COLLECTIONS" src="./img/add96277-a50f-4098-86ff-f905e85bd600.jpg" alt="">-->
+          <video
+            id="COLLECTIONS"
+            src="./img/BRANDSTORY_PC.mp4"
+            autoplay
+            loop
+            muted
+          ></video>
+          <img
+            id="CONCEPT"
+            src="./img/loivie_pick_bg_03.jpg"
+            alt="네브이미지1"
+          />
+          <img id="NEWS" src="./img/loivie_pick_bg_02.jpg" alt="네브이미지2" />
+          <img
+            id="SUPPORT"
+            src="./img/loivie_is-daily_img_pc_01.jpg"
+            alt="네브이미지3"
+          />
+          <img
+            id="SHOPLSIT"
+            src="./img/loivie_pick_bg_05.jpg"
+            alt="네브이미지4"
+          />
+        </div>
+      </nav>
+      <!--header-->
+      <section id="banner">
+        <div class="banimg">
+          <img src="./img/bg_maintop_ring.png" alt="메인페이지 시계이미지" />
+        </div>
+        <div>
+          <div class="bannerImg">
+            <div class="bannerslide1">
+              <div class="slideView1">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+          <div class="bannerTxt">
+            <div class="bannerslide2">
+              <div class="slideView2">
+                <div>
+                  <h6 class="element">2021.06 COLLECTIONS</h6>
+                  <h1 class="element">AMBILUNA</h1>
+                  <p class="element">소중한 사람을 위한 가치있는 선물</p>
+                  <a class="element" href="#">Read More</a>
+                </div>
+                <div>
+                  <h6 class="element">2021.06 COLLECTIONS</h6>
+                  <h1 class="element">ARCLY</h1>
+                  <p class="element">레이어드하기 좋은 데일리 썸머 BEST</p>
+                  <a class="element" href="#">Read More</a>
+                </div>
+                <div>
+                  <h6 class="element">2021.06 COLLECTIONS</h6>
+                  <h1 class="element">SQUARE</h1>
+                  <p class="element">계속 놀라운 사랑을 받고있는 '스퀘어'</p>
+                  <a class="element" href="#">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bannerViewMore">
+          <span class="ViewMoreTxt">ViewMore</span>
+          <div class="viewmoreIcon"></div>
+        </div>
+        <div class="bannerIndicator">
+          <div class="indicatorPrev"></div>
+          <div class="timer">
+            <div class="line"></div>
+          </div>
+          <div class="indicatorNext"></div>
+        </div>
+        <div class="indicator">
+          <div class="current">1</div>
+          <div class="allNum"></div>
+          <br />
+        </div>
+      </section>
+      <!--banner-->
+      <section id="new">
+        <div class="inner">
+          <h2 class="newTitle">NEWS</h2>
+          <div>
+            <div class="item item1">
+              <div class="itemImgOuter">
+                <div class="itemImg">
+                  <div class="imgLayer"></div>
+                </div>
+              </div>
+              <div class="itemTxt">
+                <span>2021-05-17</span>
+                <p>CHAN LUU 모델 7 월 1 일부터 예약</p>
+              </div>
+            </div>
+            <div class="item item2">
+              <div class="itemImgOuter">
+                <div class="itemImg">
+                  <div class="imgLayer"></div>
+                </div>
+              </div>
+              <div class="itemTxt">
+                <span>2021-05-17</span>
+                <p>시티즌 New Ambiluna 컬렉션</p>
+              </div>
+            </div>
+            <div class="item item3">
+              <div class="itemImgOuter">
+                <div class="itemImg">
+                  <div class="imgLayer"></div>
+                </div>
+              </div>
+              <div class="itemTxt">
+                <span>2021-05-17</span>
+                <p>디즈니 스페셜 시계 6 월 28 일 출시</p>
+              </div>
+            </div>
+            <div class="item item4">
+              <div class="itemImgOuter">
+                <div class="itemImg">
+                  <div class="imgLayer"></div>
+                </div>
+              </div>
+              <div class="itemTxt">
+                <span>2021-05-17</span>
+                <p>2021 신모델 출시</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="social">
+        <div class="animcontainer">
+          <div class="bouncybox">
+            <div class="bouncy"></div>
+          </div>
+        </div>
+        <div class="socialC">
+          <img
+            src="./img/pc_gl_title.png"
+            data-aos="fade-left"
+            alt="타이틀이미지"
+          />
+        </div>
+        <div class="inner">
+          <video muted loop autoplay src="./img/citizenV.mp4"></video>
+          <i class="far fa-play-circle"></i>
+        </div>
+      </section>
+
+      <section id="bgchane">
+        <div class="scroll" id="scroll-one">
+          <img src="./img/concept_next.png" class="concept" alt="컨셉이미지" />
+          <div class="bgCinner">
+            <div class="item01">
+              <div class="page-img">
+                <div>
+                  <div class="imgLayer"></div>
+                </div>
+                <video
+                  autoplay
+                  loop
+                  muted
+                  src="./img/ambiluna_earth.mp4"
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="top-bottom"
+                ></video>
+              </div>
+              <div class="page-txt">
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="content">
+                  <h1 class="element">Inspired by EARTH</h1>
+                  <p class="element">
+                    지구의 끝없는 확장 그리 비가 내린 후 땅의 신선함
+                  </p>
+                  <a class="element" href="#">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scroll" id="scroll-two">
+          <div class="bgCinner">
+            <div class="item02">
+              <div class="page-img">
+                <div>
+                  <div class="imgLayer"></div>
+                </div>
+                <video
+                  autoplay
+                  loop
+                  muted
+                  src="./img/ambiluna_fire.mp4"
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="top-bottom"
+                ></video>
+              </div>
+              <div class="page-txt">
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="content">
+                  <h1 class="element">Inspired by FIRE</h1>
+                  <p class="element">
+                    부드러운 아침 햇살처럼 자연스러운 아름다움
+                  </p>
+                  <a class="element" href="#">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scroll" id="scrol-three">
+          <div class="bgCinner">
+            <div class="item03">
+              <div class="page-img">
+                <div>
+                  <div class="imgLayer"></div>
+                </div>
+                <video
+                  autoplay
+                  loop
+                  muted
+                  src="./img/ambiluna_air.mp4"
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="top-bottom"
+                ></video>
+              </div>
+              <div class="page-txt">
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="content">
+                  <h1 class="element">Inspired by AIR</h1>
+                  <p class="element">
+                    시원한 바람과 맑은 공기처럼 가볍고 투명함
+                  </p>
+                  <a class="element" href="#">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="watchColor">
+        <h3 class="watchTxt">
+          <span>W</span>atch <br /><span>Y</span>our<br />
+          <span>C</span>olor
+        </h3>
+        <div class="black">
+          <div class="lightBox1" data-aos="zoom-in-up" data-aos="fade-up">
+            <div class="LBimg LB1img"></div>
+            <h1 class="element">화이트 초콜릿 커넥터 가죽스트랩</h1>
+            <p class="element">크림 베이지의 부드러운 색감을 담은 스트랩</p>
+            <span class="price"><s>69,900원</s></span>
+            <span class="sale">59,900원</span>
+          </div>
+          <div class="lightBox2" data-aos="zoom-in-up" data-aos="fade-up">
+            <div class="LBimg LB2img"></div>
+            <h1 class="element">웜 그레이 커넥터 가죽스트랩</h1>
+            <p class="element">
+              드레스업부터 캐주얼룩까지 모두 어울리는 베이지 그레이
+            </p>
+            <span class="price"><s>69,900원</s></span>
+            <span class="sale">59,900원</span>
+          </div>
+          <div class="lightBox3" data-aos="zoom-in-up" data-aos="fade-up">
+            <div class="LBimg LB3img"></div>
+            <h1 class="element">진저 브라운 커넥터 가죽스트랩</h1>
+            <p class="element">진저 쿠키에서 영감을 받은 카멜 컬러 스트랩</p>
+            <span class="price"><s>69,900원</s></span>
+            <span class="sale">59,900원</span>
+          </div>
+        </div>
+        <div class="two"></div>
+      </section>
+
+      <section id="lovi">
+        <!--                <div class="loviBg"></div>-->
+        <div class="inner">
+          <h2 class="loviTitle">citizen's</h2>
+          <ul>
+            <li class="loviEn">What is your color?</li>
+            <li class="loviKo">당신의 색은 무엇인가요?</li>
+
+            <li class="loviEn">About Your Color</li>
+            <li class="loviKo">
+              좋아하는 것들, 기억하고 싶은 순간을 담은 컬러로 당신을 표현해
+              보세요.
+            </li>
+
+            <li class="loviEn">Birth Stone</li>
+            <li class="loviKo">
+              나를 상징하는 시티즌의 탄생석 컬렉션으로 당신의 다채로운 이야기를
+              전해주세요.
+            </li>
+          </ul>
+          <div class="loviImg">
+            <img src="./img/mind.png" alt="수채화이미지" />
+            <img src="./img/essence.png" alt="수채화이미지" />
+            <img src="./img/roots.png" alt="수채화이미지" />
+
+            <img src="./img/loivie_pick_bg_03.jpg" alt="배경이미지" />
+            <img src="./img/loivie_is-clean_img_pc_01.jpg" alt="배경이미지" />
+            <img
+              src="./img/loivie_is-awakening_img_pc_01.jpg"
+              alt="배경이미지"
+            />
+
+            <img src="./img/st1.png" alt="탄생석이미지" />
+            <img src="./img/st2.png" alt="탄생석이미지" />
+            <img src="./img/st4.png" alt="탄생석이미지" />
+            <img src="./img/st5.png" alt="탄생석이미지" />
+          </div>
+        </div>
+      </section>
+      <section id="nextChallnge">
+        <div class="connectImg"></div>
+        <div class="centerImg"></div>
+        <div class="leftImg"></div>
+        <div class="rightImg"></div>
+        <div class="half">
+          <div class="left" data-aos="flip-left">
+            <div class="nextText">
+              <h3>OUR NEXT CHALLENGE</h3>
+              <h2>
+                CITIZEN Eco-Drive Riiiver <br />
+                APP
+              </h2>
+              <h2>시티즌 에코 드라이브 앱으로 만나보세요!</h2>
+              <div class="nextLeftIcon">
+                <img src="./img/icn_riiiver01.png" alt="app" />
+                <img src="./img/btn_appstore.png" alt="app" />
+                <img src="./img/btn_googleplay.png" alt="app" />
+              </div>
+            </div>
+          </div>
+          <div class="right" data-aos="flip-right">
+            <div class="nextText">
+              <h2>COMMING SOON</h2>
+              <p>With watch and Riiver,</p>
+              <p>A new everyday is born.</p>
+              <p>
+                시티즌 에코 드라이브와 함께, <br />새로운 일상을 시작해보세요!
+              </p>
+              <div data-brackets-id="129" class="container">
+                <p class="containerTitle">
+                  <span>2021년 <span>8월 1일</span> </span>
+                </p>
+                <div data-brackets-id="131" id="countdown">
+                  <ul data-brackets-id="132">
+                    <li data-brackets-id="133">
+                      <span data-brackets-id="134" id="days"></span>days
+                    </li>
+                    <li class="col"><span>-</span></li>
+
+                    <li data-brackets-id="135">
+                      <span data-brackets-id="136" id="hours"></span>hours
+                    </li>
+                    <li class="col"><span>:</span></li>
+
+                    <li data-brackets-id="137">
+                      <span data-brackets-id="138" id="minutes"></span>minutes
+                    </li>
+                    <li class="col"><span>:</span></li>
+
+                    <li data-brackets-id="139">
+                      <span data-brackets-id="140" id="seconds"></span>seconds
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer">
+        <div class="foot1">
+          <img src="./img/design_pict_01.png" class="fring" alt="푸터이미지" />
+          <div class="foot1Text">
+            <span data-aos="fade-up"
+              ><a href="https://www.instagram.com/citizen_korea/?hl=ko"
+                ><img src="./img/instagram_pk.svg" alt="인스타" /></a
+            ></span>
+
+            <h3 data-aos="fade-up" data-aos-delay="300">
+              Follw us on Instagram
+            </h3>
+            <p data-aos="fade-up" data-aos-delay="600">
+              <a href="https://www.instagram.com/citizen_korea/?hl=ko"
+                >@citizen_korea</a
+              >
+            </p>
+          </div>
+          <div class="instagramImg">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="foot2">
+          <div class="inner">
+            <div class="foot2left">
+              <ul>
+                <li class="top"><a href="#">TOP</a></li>
+                <li class="newTop"><a href="#">NEW</a></li>
+                <li class="timeTop"><a href="#">TIME</a></li>
+                <li class="conceptTop"><a href="#">CONCEPT</a></li>
+              </ul>
+              <ul>
+                <li class="watchTop"><a href="#">WATCH YOUR COLOR</a></li>
+                <li class="otherTop"><a href="#">OTHER COLLECTION</a></li>
+                <li class="aboutTop"><a href="#">ABOUT YOUR COLOR</a></li>
+                <li class="nextTop"><a href="#">OUR NEXT CHALLENGE</a></li>
+              </ul>
+            </div>
+            <div class="foo2right">
+              <div></div>
+              <div>
+                <span>KO</span>
+                <span>EN</span>
+                <button>
+                  LOCAL SITE <span class="footBtn">LOCAL SITE</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="foot3">
+          <div class="inner">
+            <p>2021 CITIZEN WATCH CO. LTD.</p>
+            <p>&copy; 2021 OH, GAHEE Copyright All rights reserved</p>
+          </div>
+        </div>
+      </footer>
+      <div class="circle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
     <script>
-    $(window).scroll(function(){
-            var wh = $(window).height();
-            var ss = $(this).scrollTop();
-       })
-       $('.top').click(function(){
-           $('html, body').animate({'scrollTop':0},1000);
-       })
-       $('.newTop').click(function(){
-           $('html, body').animate({'scrollTop':$('#new').offset().top},1000);
-       })
-        $('.timeTop').click(function(){
-           $('html, body').animate({'scrollTop':$('#social').offset().top},1000);
-       })
-         $('.conceptTop').click(function(){
-           $('html, body').animate({'scrollTop':$('#bgchane').offset().top},1000);
-       })
-         $('.watchTop').click(function(){
-           $('html, body').animate({'scrollTop':$('#watchColor').offset().top},1000);
-       })
-         $('.otherTop').click(function(){
-           $('html, body').animate({'scrollTop':$('#lovi').offset().top},1000);
-       })
-         $('.aboutTop').click(function(){
-           $('html, body').animate({'scrollTop':$('#lovi').offset().top},1000);
-       })
-         $('.nextTop').click(function(){
-           $('html, body').animate({'scrollTop':$('#nextChallnge').offset().top},1000);
-       })
+      $(window).scroll(function () {
+        var wh = $(window).height();
+        var ss = $(this).scrollTop();
+      });
+      $('.top').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 1000);
+      });
+      $('.newTop').click(function () {
+        $('html, body').animate({ scrollTop: $('#new').offset().top }, 1000);
+      });
+      $('.timeTop').click(function () {
+        $('html, body').animate({ scrollTop: $('#social').offset().top }, 1000);
+      });
+      $('.conceptTop').click(function () {
+        $('html, body').animate(
+          { scrollTop: $('#bgchane').offset().top },
+          1000
+        );
+      });
+      $('.watchTop').click(function () {
+        $('html, body').animate(
+          { scrollTop: $('#watchColor').offset().top },
+          1000
+        );
+      });
+      $('.otherTop').click(function () {
+        $('html, body').animate({ scrollTop: $('#lovi').offset().top }, 1000);
+      });
+      $('.aboutTop').click(function () {
+        $('html, body').animate({ scrollTop: $('#lovi').offset().top }, 1000);
+      });
+      $('.nextTop').click(function () {
+        $('html, body').animate(
+          { scrollTop: $('#nextChallnge').offset().top },
+          1000
+        );
+      });
     </script>
-    
-</body>
+  </body>
 </html>
-
 
 <!--백업용!!-->

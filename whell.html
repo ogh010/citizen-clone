@@ -1,124 +1,183 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="kr">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>휠로 가로컨텐츠 이동+메뉴색칠</title>
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reset.css" />
     <style>
-        /*세로갤러리디자인*/
-        body{height:20000px;}
-        header{height:100px; background-color:cornflowerblue; position:fixed; z-index:99; width:100%;}
-        h1{float:left;}
-        .lnb{float:right;}
-        .lnb li{float:left;}
-        .lnb a{display:block; padding:20px;background-color:orange; margin:5px;}
-        section{width:100%; height:90%; background-color:pink; position:fixed; left:0; top:10%;
-        /* 전체 구조물을 가운데 두기 위한 디자인 */ perspective:5000px;}
-        section>div{position:absolute; width:90%; height:80%; margin:5%; font-size:100px; text-align:center; line-height:80%; opacity:0.2; transition:0.4s;}
-        
-        section>div:nth-child(1){background-color:red; transform:translateZ(0);}
-        /* 양수값이면 앞으로 튀어나와서(너무많이확대) 안보이고 음수일때는 뒤로 가면서 작게 보인다. */
-        section>div:nth-child(2){background-color:blue; transform:translateZ(-5000px);}
-        section>div:nth-child(3){background-color:green; transform:translateZ(-10000px);}
-        section>div:nth-child(4){background-color:orange; transform:translateZ(-15000px);}
-        section>div:nth-child(5){background-color:purple; transform:translateZ(-20000px);}
-        
-        
-        footer{height:200px; background-color:gray;}
-        .lnb a.on{background-color:navy; color:#fff;}
-        section>div.on{opacity:1;}
+      /*세로갤러리디자인*/
+      body {
+        height: 20000px;
+      }
+      header {
+        height: 100px;
+        background-color: cornflowerblue;
+        position: fixed;
+        z-index: 99;
+        width: 100%;
+      }
+      h1 {
+        float: left;
+      }
+      .lnb {
+        float: right;
+      }
+      .lnb li {
+        float: left;
+      }
+      .lnb a {
+        display: block;
+        padding: 20px;
+        background-color: orange;
+        margin: 5px;
+      }
+      section {
+        width: 100%;
+        height: 90%;
+        background-color: pink;
+        position: fixed;
+        left: 0;
+        top: 10%;
+        /* 전체 구조물을 가운데 두기 위한 디자인 */
+        perspective: 5000px;
+      }
+      section > div {
+        position: absolute;
+        width: 90%;
+        height: 80%;
+        margin: 5%;
+        font-size: 100px;
+        text-align: center;
+        line-height: 80%;
+        opacity: 0.2;
+        transition: 0.4s;
+      }
+
+      section > div:nth-child(1) {
+        background-color: red;
+        transform: translateZ(0);
+      }
+      /* 양수값이면 앞으로 튀어나와서(너무많이확대) 안보이고 음수일때는 뒤로 가면서 작게 보인다. */
+      section > div:nth-child(2) {
+        background-color: blue;
+        transform: translateZ(-5000px);
+      }
+      section > div:nth-child(3) {
+        background-color: green;
+        transform: translateZ(-10000px);
+      }
+      section > div:nth-child(4) {
+        background-color: orange;
+        transform: translateZ(-15000px);
+      }
+      section > div:nth-child(5) {
+        background-color: purple;
+        transform: translateZ(-20000px);
+      }
+
+      footer {
+        height: 200px;
+        background-color: gray;
+      }
+      .lnb a.on {
+        background-color: navy;
+        color: #fff;
+      }
+      section > div.on {
+        opacity: 1;
+      }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-    $(function(){
+      $(function () {
         $(window).scrollTop(6200);
         //보고있는 부분 메뉴 색칠되게
         //어떤 페이지든 시작화면을 초기화 필요
         /*$('.lnb li').eq(0).find('a').addClass('on');
         $('section').animate({'left':0});*/
-        
+
         /*$('.lnb li').click(function(){
             var n = $(this).index();
             $('.lnb a').removeClass('on');
             $('.lnb li').eq(n).find('a').addClass('on');
             $('section').stop().animate({'left':-1000*n});
         })*/
-        
+
         //휠 값이 커질수록 div번호도 커짐
         //each -> 반복제어문
-        $('.lnb li').click(function(){
-            var btnNum = $(this).index(); //st를 대신 사용하기 위한 번호 필요
-                                        //div이 이동하기 위해서 필요한 번호
-            $('.lnb li').each(function(){
-                $(this).find('a').removeClass('on'); //클릭과 상관없이 0~4 li 모든 this
-            })
-            
-            $('section>div').each(function(){
-                var n = $(this).index(); //기본값(0,1000,2000,3000,4000) 구하기
-                $(this).css({'transform':'translateZ('+(btnNum*5000-n*5000)+'px)'});
-                $(this).removeClass('on');
-            })
-            $(this).find('a').addClass('on'); //클릭한 li == this
-            $('section>div').eq(btnNum).addClass('on');
-        })
-        
-        $(window).scroll(function(){
-            var st = $(window).scrollTop(); //현재스크롤의위치값
-            $('section>div').each(function(){
-                var n = $(this).index();
-                $(this).css({'transform':'translateZ('+(st-5000*n)+'px)'});
-                $(this).removeClass('on');
-            })
-            
-            /* 휠의 위치에 따라 메뉴 선택 */
-            $('.lnb li').each(function(){
-                $(this).find('a').removeClass('on');
-                //메뉴 전체 선택 지우기
-            })
-            if(st<=0){
-                $('.lnb li').eq(0).find('a').addClass('on');
-                $('section>div').eq(0).addClass('on');
-            }else if(st<=5000){
-                $('.lnb li').eq(1).find('a').addClass('on');
-                $('section>div').eq(1).addClass('on');
-            }else if(st<=10000){
-                $('.lnb li').eq(2).find('a').addClass('on');
-                $('section>div').eq(2).addClass('on');
-            }else if(st<=15000){
-                $('.lnb li').eq(3).find('a').addClass('on');
-                $('section>div').eq(3).addClass('on');
-            }else{
-                $('.lnb li').eq(4).find('a').addClass('on');
-                $('section>div').eq(4).addClass('on');
-            }
-        })
+        $('.lnb li').click(function () {
+          var btnNum = $(this).index(); //st를 대신 사용하기 위한 번호 필요
+          //div이 이동하기 위해서 필요한 번호
+          $('.lnb li').each(function () {
+            $(this).find('a').removeClass('on'); //클릭과 상관없이 0~4 li 모든 this
+          });
+
+          $('section>div').each(function () {
+            var n = $(this).index(); //기본값(0,1000,2000,3000,4000) 구하기
+            $(this).css({
+              transform: 'translateZ(' + (btnNum * 5000 - n * 5000) + 'px)',
+            });
+            $(this).removeClass('on');
+          });
+          $(this).find('a').addClass('on'); //클릭한 li == this
+          $('section>div').eq(btnNum).addClass('on');
+        });
+
+        $(window).scroll(function () {
+          var st = $(window).scrollTop(); //현재스크롤의위치값
+          $('section>div').each(function () {
+            var n = $(this).index();
+            $(this).css({ transform: 'translateZ(' + (st - 5000 * n) + 'px)' });
+            $(this).removeClass('on');
+          });
+
+          /* 휠의 위치에 따라 메뉴 선택 */
+          $('.lnb li').each(function () {
+            $(this).find('a').removeClass('on');
+            //메뉴 전체 선택 지우기
+          });
+          if (st <= 0) {
+            $('.lnb li').eq(0).find('a').addClass('on');
+            $('section>div').eq(0).addClass('on');
+          } else if (st <= 5000) {
+            $('.lnb li').eq(1).find('a').addClass('on');
+            $('section>div').eq(1).addClass('on');
+          } else if (st <= 10000) {
+            $('.lnb li').eq(2).find('a').addClass('on');
+            $('section>div').eq(2).addClass('on');
+          } else if (st <= 15000) {
+            $('.lnb li').eq(3).find('a').addClass('on');
+            $('section>div').eq(3).addClass('on');
+          } else {
+            $('.lnb li').eq(4).find('a').addClass('on');
+            $('section>div').eq(4).addClass('on');
+          }
+        });
         //원근값 = perspective = 값을 기준으로 배치, 이동
-        
-    })
+      });
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <!--스티키메뉴-->
     <header>
-        <h1>LOGO</h1>
-        <nav class="lnb">
-            <ul>
-                <li><a href="#">MENU01</a></li>
-                <li><a href="#">MENU02</a></li>
-                <li><a href="#">MENU03</a></li>
-                <li><a href="#">MENU04</a></li>
-                <li><a href="#">MENU05</a></li>
-            </ul>
-        </nav>
+      <h1>LOGO</h1>
+      <nav class="lnb">
+        <ul>
+          <li><a href="#">MENU01</a></li>
+          <li><a href="#">MENU02</a></li>
+          <li><a href="#">MENU03</a></li>
+          <li><a href="#">MENU04</a></li>
+          <li><a href="#">MENU05</a></li>
+        </ul>
+      </nav>
     </header>
     <section>
-        <div>BOX1</div>
-        <div>BOX2</div>
-        <div>BOX3</div>
-        <div>BOX4</div>
-        <div>BOX5</div>
+      <div>BOX1</div>
+      <div>BOX2</div>
+      <div>BOX3</div>
+      <div>BOX4</div>
+      <div>BOX5</div>
     </section>
     <footer></footer>
-</body>
+  </body>
 </html>
