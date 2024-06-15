@@ -6,9 +6,23 @@
 
 이 프로젝트는 HTML, CSS, JavaScript를 사용하여 웹사이트의 레이아웃과 스타일을 구성하고, <br/>스크롤 기반 애니메이션을 활용한 동적인 효과를 추가하여 제품을 더욱 집중시킬 수 있도록 제작하였습니다. <br/>특히, 다양한 디바이스에서 최적의 사용자 경험을 제공하기 위해 반응형 디자인을 적용했습니다. 🌟
 
+
+## 주요 라이브러리 및 프레임워크
+
+- **jQuery**: [https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js](https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js)
+- **GSAP**: [https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js](https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js)
+- **AOS**: [https://unpkg.com/aos@next/dist/aos.js](https://unpkg.com/aos@next/dist/aos.js)
+- **Font Awesome**: [https://use.fontawesome.com/releases/v5.15.3/css/all.css](https://use.fontawesome.com/releases/v5.15.3/css/all.css)
+- **Google Fonts**: 
+  - [Playfair Display SC](https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap)
+  - [Cormorant](https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap)
+  - [Quicksand](https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap)
+- **AOS CSS**: [https://unpkg.com/aos@next/dist/aos.css](https://unpkg.com/aos@next/dist/aos.css)
+
+
 ## 데모 사이트
 
-프로젝트의 데모 사이트는 [여기](https://ogh010.github.io/citizen-clone/)에서 확인할 수 있습니다.
+프로젝트의 데모 사이트는 [여기](https://ogh010.github.io/citizen-clone/)에서 확인할 수 있습니다. 🤚
 
 ## 스크린샷
 
